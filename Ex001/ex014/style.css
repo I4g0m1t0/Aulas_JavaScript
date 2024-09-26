@@ -1,7 +1,7 @@
 body{
     background: rgb(50, 50, 238);
     font: normal 15pt Arial;
-    tes
+    text-align: center;
 }
 
 header{
@@ -22,6 +22,7 @@ section{
         height: 250px;
         border-radius: 100%;
         object-fit: cover;
+        margin-top: 10px;
     }
 }
 

@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do dia</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div id="msg">
-            
+            <p>Número: 
+                <input type="number" name="iptNumberInicio" id="iptNumberInicio">
+                <input type="button" value="Calcular tabuada" onclick="tabuada()">
+            </p>
         </div>
-        <div id="foto">
-            <img id="imagem" src="images/manha.jpg" alt="manha">
+        <div id="resultado">
+            <select name="tabuada" id="selTabuada" size="10">
+                <option>Digite um número acima!</option>
+            </select>
         </div>
     </section>
     <footer>

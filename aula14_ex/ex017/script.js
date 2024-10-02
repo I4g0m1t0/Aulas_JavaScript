@@ -1,17 +1,20 @@
-function carregar(){
-    var msg = document.getElementById('msg');
-    var img = document.getElementById('imagem');
-    var data = new Date();
-    var hora = data.getHours();
-    msg.innerHTML = `Agora são ${hora} horas`;
-    if (hora >= 0 && hora < 12){
-        img.src = 'images/manha.jpg';
-        document.body.style.background = '#e2cd9f';
-    } else if (hora >= 12 && hora < 18){
-        img.src = 'images/tarde.jpg';
-        document.body.style.background = '#b9846f';
+function tabuada(){
+    let numero = document.getElementById('iptNumberInicio').value;
+    let resultado = document.getElementById('selTabuada');
+    resultado.innerHTML = '';
+
+    if (numero === ""){
+        alert('Por favor digite um número!');
     } else {
-        img.src = 'images/noite.jpg';
-        document.body.style.background = '#515154';
+        numero = Number(numero);
+
+        for (var i = 0; i <= 10; i++){
+            let num = numero * i;
+            let option = document.createElement('option');
+            option.text = `${numero} x ${i} = ${num}`;
+            option.value = `tab${i}`;
+            // resultado.add(option); //Para adicionar ao select utilizamos .add()
+            resultado.appendChild(option);
+        }
     }
 }
